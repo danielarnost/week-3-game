@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Psychic Game</title>
+    <script src="some.js" type="text/javascript"></script>
+    <link href="assets/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+    <div id="game">
+        The Psychic game
+        <br><br> You have 9 guesses to guess the random letter!
+        <br><br> Press any letter to begin!
+
+        
+    </div>
+
+    <script type="text/javascript">
+
+     
+
+
+        document.onkeyup = function(event) {
+
+            // Determines which exact key was selected. Make it lowercase
+            var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+
+            if (options.indexOf(userGuess) == -1) {
+                alert("Wrong Input");  
+                return;
+            }
+            //****change so that user guesses is displayed, not alerted and goes down by one with each wrong guess
+             rounds++;
+        	alert("Round " + rounds);
+
+            // Alerts with user guess
+            alert("Your choice is " + userGuess);
+
+            // Create code to randomly choose one of the three options (Computer) 
+            var computerGuess = options[Math.floor(Math.random() * options.length)];
+
+            // Alerts with Computer guess
+            alert("The computer's choice is " + computerGuess);
+
+            if (userGuess == computerGuess) {
+                alert("It's a draw!");  //win
+                draws++;
+            } else if ((userGuess == "r" && computerGuess == "s") ||
+                (userGuess == "p" && computerGuess == "r") ||
+                (userGuess == "s" && computerGuess == "p")) {
+                alert("You win!");
+                wins++;
+            } else {
+                alert("You lose");
+                losses++;
+            }
+
+            alert("Your score: wins " + wins + " losses " + losses + " draws " + draws);
+        }
+    </script>
+</body>
+
+</html>
