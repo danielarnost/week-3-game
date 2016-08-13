@@ -1,65 +1,53 @@
 var options = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o','p','q','r','s', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-        var winsCount = 0,
-            lossCount = 0,
-            guessesLeft = 10,
-            guessesSoFar = [], // list of letters guessed so far
-            Win = false;
-            computerGuess = Mathfloor(Math.random)()*options.length;
+        var wins = 0,
+            losses = 0,
+            guessesLeft = 9,
+            guessedSoFar = [] // list of letters guessed so far
+            
+			var computerGuess = options[Math.floor(Math.random() * options.length)];
+
+            function reset(){
+            	guessedSoFar = []
+            	guessesLeft = 9 
+            	computerGuess = options[Math.floor(Math.random() * options.length)];
+            }
+
+
 
            document.onkeyup = function(event) {
+           	var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+	
+           	if (userGuess == computerGuess) {
+              	var wins = document.getElementById("wins"); 
+              	wins.innerHTML = 1 + parseInt(wins.innerHTML);
+              	reset()
+            } else if (guessesLeft == 0) { var losses = document.getElementById("losses"); 
+            	losses.innerHTML = 1 + parseInt(losses.innerHTML);
+                reset()
+            }
+            	guessesLeft -- 
+            	guessedSoFar.push(userGuess)
+            	var guessed = document.getElementById("guessed");
+            	guessed.innerHTML = guessedSoFar
 
-           var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+            	var guesses = document.getElementById("guesses");
+            	guesses.innerHTML = guessesLeft
+
+}
+
+
+
+                      
 
            
 
-            for (var i = guessesLeftCount.length -1; 1>0;  i--);
-
 
            //*** alert("Your choice is " + userGuess); HOW DO I GET THIS TO APPEAR ON SCREEN?!
-            var computerGuess = Mathfloor(Math.random)()*options.length;
+            
 
-              if (userGuess == computerGuess) {
-              	document.getElementById()winsCount ++
-              } else if userGuess !== computerGuess
-              	guessesSoFar++;
-              	guessesLeft--
-              } else if userGuess !== computerGuess
-              	guessesSoFar++;
-              	guessesLeft--
-              } else if userGuess !== computerGuess
-              	guessesSoFar++;
-              	guessesLeft--
-              } else if userGuess !== computerGuess
-              	guessesSoFar++;
-              	guessesLeft--
-              } else if userGuess !== computerGuess
-              	guessesSoFar++;
-              } else if userGuess !== computerGuess
-              	guessesSoFar++;
-              	guessesLeft--
-              } else if userGuess !== computerGuess
-              	guessesSoFar++;
-              	guessesLeft--
-              } else if userGuess !== computerGuess
-              	guessesSoFar++;
-              	guessesLeft--
-              } else if userGuess !== computerGuess
-              	guessesSoFar++;
-              	guessesLeft--
-              } else {
+              
 
-                alert("You lose");
-                lossCount++;
-            }
+           
 
-
-
-
-
-
-
-
-            }
-
-             
+            
 
