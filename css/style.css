@@ -1,9 +1,17 @@
 
-h1{
+ h1{
 font-weight: bold;
 font-size: 200%;
-  }
+background: white;
+}
+#tpg{
 
+	border-bottom: 1px solid #777777;
+}
+#game{
+background:#4aaaa5;
+
+}
 #wins{
 	font-family: 'Georgia', Times, Times New Roman, serif;
 }
