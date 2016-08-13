@@ -1,0 +1,23 @@
+
+h1{
+font-weight: bold;
+  }
+
+#wins{
+	font-family: 'Georgia', Times, Times New Roman, serif;
+}
+
+#losses{
+font-family: 'Georgia', Times, Times New Roman, serif;
+
+}
+
+#guesses{
+font-family: 'Georgia', Times, Times New Roman, serif;
+
+}
+
+#guessed{
+
+	font-family: 'Georgia', Times, Times New Roman, serif;
+}
