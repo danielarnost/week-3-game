@@ -2,15 +2,32 @@
  h1{
 font-weight: bold;
 font-size: 200%;
-background: white;
+background-color:#dddddd;
+padding-bottom: 10px;
+margin:0 auto;
 }
 #tpg{
-
+margin:0 auto;
+max-width:960px;
 	border-bottom: 1px solid #777777;
+
+}
+body{
+
+	margin:0 auto;
 }
 #game{
+	margin: auto;
 background:#4aaaa5;
+padding-bottom:50px;
+border-bottom: 1px solid #777777;
 
+}
+
+#game img{ width: 200px;
+
+position:absolute; left:300px; top:75px;
+border: 1px solid black;
 }
 #wins{
 	font-family: 'Georgia', Times, Times New Roman, serif;
